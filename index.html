@@ -1,0 +1,71 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     
+
+    <title>CRUD TASK</title>
+  </head>
+  <style>
+    i {
+      color: aliceblue;
+    }
+  </style>
+  <body> 
+    
+      
+<!-- Input fields to save data -->
+<form >
+<label for="id">ID</label>
+<input type="text" id="id" readonly><br><br>
+
+<label for="name">Name:</label>
+<input type="text" id="name" required/><br><br>
+
+<label for="age">Age:</label>
+<input type="number" id="age" required/><br><br>
+
+<label for="city">City:</label>
+<input type="text" id="city" required/><br><br>
+
+<label for="state">State:</label>
+<input type="text" id="state" required/><br><br>
+
+<button id="save-button" >Save</button>
+<button id="clear-button">Clear</button>
+</form>
+<div class="table-data ms-3 w-75">
+  <label for="searchCategory">Search by Category:</label>
+  <input type="text" id="myInput" onkeyup="searchTable()" placeholder="Search for names.." title="Type in a name">
+
+<!-- table -->
+
+
+  <tbody id="tbody" class="text-center"></tbody>
+</table>
+<table class="table border" id="registration-table">
+  <thead>
+    <tr>
+      <th onclick="sortTable(0)">ID</th>
+      <th onclick="sortTable(1)">Name</th>
+      <th onclick="sortTable(2)">Age</th>
+      <th onclick="sortTable(3)">City</th>
+      <th onclick="sortTable(4)">State</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody id="table-body">
+  </tbody>
+</table>
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html> 
+
